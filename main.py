@@ -1,7 +1,9 @@
+import math
+
+
 import numpy as np
 import matplotlib.pyplot as plt
 from scipy import stats
-import math
 import seaborn as sns
 
 
@@ -78,6 +80,7 @@ def plot_rel_hist(x: np.ndarray, a: int, sigma: int) -> None:
     plt.ylabel("Частота")
     plt.grid(True, linestyle='--', alpha=0.5)
     plt.show()
+
 
 def plot_cumulate(x: np.ndarray, a: int, sigma: int) -> None:
     plt.figure()
@@ -205,6 +208,7 @@ def library_stats(x):
         'kurtosis': kurtosis
     }
 
+
 def mode(x: np.ndarray) -> float:
     frequency = {}
     for value in x:
@@ -260,6 +264,7 @@ def main():
 
     lib_stats_2 = library_stats(x2)
     print(lib_stats_2)
+
 
 if __name__ == '__main__':
     main()
